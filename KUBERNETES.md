@@ -16,6 +16,7 @@ $ go get github.com/GitbookIO/go-gitbook-api
 ```
 {% endmethod %}
 
+{% method %}
 The next thing is to do foo:
 
 {% sample lang="js" %}
