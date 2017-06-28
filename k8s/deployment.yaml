@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: gitbook
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: gitbook
+    spec:
+      containers:
+      - name: operator
+        image: upmcenterprises/gitbook
+        imagePullPolicy: Always
+        volumeMounts:
+          - mountPath: /srv/html
+            name: docs
+    volumes:
+      - name: git-volume
+        gitRepo:
+          repository: "ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/gitbook"
