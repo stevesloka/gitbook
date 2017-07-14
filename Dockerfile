@@ -11,6 +11,8 @@ RUN npm install --global gitbook-cli && \
 	npm cache clear && \
 	rm -rf /tmp/*
 
+ADD book.json /srv/gitbook/book.json
+
 WORKDIR /srv/gitbook
 
 EXPOSE 4000 35729

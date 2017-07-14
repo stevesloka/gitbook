@@ -1,5 +1,5 @@
 {
-    "plugins": ["theme-api"],
+    "plugins": ["theme-api, swagger"],
     "pluginsConfig": {
         "theme-api": {
             "theme": "dark"
